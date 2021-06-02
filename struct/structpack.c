@@ -5,7 +5,7 @@ struct test1 {
     int i;
 };
 
-struct __attribute__ ((__packed__)) test2 {
+struct __attribute__ ((__packed__)) test2 { //取消内存对齐
     char c;
     int i;
 };
@@ -13,7 +13,7 @@ struct __attribute__ ((__packed__)) test2 {
 struct test3 {
     char c;
     int i;
-    char buf[];
+    char buf[];  //可变数组,size为0
 };
 
 struct __attribute__ ((__packed__)) test4 {
